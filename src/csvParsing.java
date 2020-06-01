@@ -10,18 +10,17 @@ import java.io.IOException;
 public class csvParsing {
 
     public static void main(String[] args) throws IOException {
-        String lines = Files.readString(Paths.get("sample.csv"),Charset.forName("UTF-8"));
+        byte[] lines = Files.readAllBytes(Paths.get("sample.csv"));
+        String buffer = new String(lines,Charset.forName("UTF-8"));
 
-        String[][] csv = parseLines(lines);
-        System.out.println(csv[85][2]);
-        /*
+        String[][] csv = parseLines(buffer);
+        //System.out.println(csv[34][0]);
         for (String[] row : csv) {
             for (String col : row) {
                 System.out.print(col+'\t');
             }
             System.out.println();
         }
-        */
     }
     /* Config
     ----------*/
