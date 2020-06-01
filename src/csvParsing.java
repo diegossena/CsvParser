@@ -24,11 +24,11 @@ public class csvParsing {
     }
     /* Config
     ----------*/
-    public static char quote = '"';
-    public static char separator = ',';
+    private static char quote = '"';
+    private static char separator = ',';
     /* CSV Parse
     -------------*/
-    public static String[][] parseLines(String csvTextString) {
+    private static String[][] parseLines(String csvTextString) {
         String[] lines = csvTextString.split("\n");
         String[][] parsedCSV = new String[lines.length][];
 
@@ -38,7 +38,7 @@ public class csvParsing {
 
         return parsedCSV;
     }
-    public static String[] parseColumns(String csvLine) {
+    private static String[] parseColumns(String csvLine) {
         List<String> columns = new ArrayList<>(); // Column list
         StringBuffer curVal = new StringBuffer();
 
