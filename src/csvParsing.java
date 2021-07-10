@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import java.io.IOException;
 
-public class csvParsing {
+public class csvParser {
 
     public static void main(String[] args) throws IOException {
         byte[] lines = Files.readAllBytes(Paths.get("sample.csv"));
